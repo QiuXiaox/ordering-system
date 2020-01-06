@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>可追溯订餐系统</title>
+
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/shoppingCar.css">
+
+</head>
+<body><script></script>
+<div class="shoppingCar-title">我的购物车</div>
+<section class="cartMain">
+	<div class="cartMain_hd">
+		<ul class="order_lists cartTop">
+			<li class="list_con">商品信息</li>
+			<li class="list_info">商品参数</li>
+			<li class="list_price">单价</li>
+			<li class="list_amount">数量</li>
+			<li class="list_op">操作</li>
+		</ul>
+	</div>
+
+	<div class="cartBox">
+		<div class="order_content" id="shopBox">
+		</div>
+	</div>
+	<!--底部-->
+	<div class="bar-wrapper">
+		<div class="bar-right">
+			<div class="deleteCar">清空购物车</div>
+			<div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
+			<div class="calBtn"><a href="javascript:;">结算</a></div>
+		</div>
+	</div>
+</section>
+<section class="model_bg"></section>
+<section class="my_model">
+	<p class="title">删除宝贝<span class="closeModel">X</span></p>
+	<p>您确认要删除该宝贝吗？</p>
+	<div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;" class="dialog-close">关闭</a></div>
+</section>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/shoppingCar.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" type="text/css" href="../css/personalManage.css">
+  <title>可追溯订餐系统</title>
+</head>
+
+<body>
+  <div id="studentContainer">
+    <div class="layui-form">
+      <button type="button" class="layui-btn layui-btn-normal addStudent">添加员工</button>
+      <table class="layui-table">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>用户名</th>
+            <th>姓名</th>
+            <th>电话</th>
+            <th>健康证</th>
+            <th>健康证过期时间</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="studentTable">
+        </tbody>
+      </table>
+      <div id="pagetion"></div>
+    </div>
+    <div class="wrrap">
+      <div class="studentBox">
+        <div class="student-header">
+          <span>员工信息</span>
+          <span class="closeStudentBox">x</span>
+        </div>
+        <div class="student-body">
+          <form class="layui-form" action="" lay-filter="example">
+            <div class="layui-form-item">
+              <label class="layui-form-label">用户名:</label>
+              <div class="layui-input-block">
+                <input class="layui-input account" type="text" name="username" lay-verify="title" autocomplete="off"
+                  readonly>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">密码:</label>
+              <div class="layui-input-block">
+                <input class="layui-input pwd" type="password" name="username" lay-verify="title" autocomplete="off"
+                  readonly>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">姓名:</label>
+              <div class="layui-input-block">
+                <input class="layui-input name" type="text" name="username" lay-verify="title" autocomplete="off"
+                  readonly>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">电话:</label>
+              <div class="layui-input-block">
+                <input class="layui-input tel" type="text" name="username" lay-verify="title" autocomplete="off"
+                  readonly>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">健康证:</label>
+              <div class="layui-input-block">
+                <img class="healthPic" src="" alt="" style="width: 150px;height: 80px;">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">健康证过期时间:</label>
+              <div class="layui-input-block">
+                <input class="layui-input healthExpire" type="text" name="username" lay-verify="title"
+                  autocomplete="off" readonly>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="wrrap2">
+      <div class="studentBox2">
+        <div class="student-header">
+          <span>员工信息</span>
+          <span class="closeStudentBox2">x</span>
+        </div>
+        <div class="student-body">
+          <form class="layui-form" action="" lay-filter="example">
+            <div class="layui-form-item">
+              <label class="layui-form-label">用户名:</label>
+              <div class="layui-input-block">
+                <input class="layui-input account" type="text" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">密码:</label>
+              <div class="layui-input-block">
+                <input class="layui-input pwd" type="password" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">姓名:</label>
+              <div class="layui-input-block">
+                <input class="layui-input name" type="text" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">电话:</label>
+              <div class="layui-input-block">
+                <input class="layui-input tel" type="text" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">健康证:</label>
+              <div class="layui-input-block">
+                <img class="healthPic" src="" alt="" style="width: 150px;height: 80px;">
+                <div class="layui-upload" style="margin-top: 10px;">
+                  <button type="button" class="layui-btn layui-btn-normal" id="test8">+</button>
+                  <button type="button" class="layui-btn uploadHeathPic" id="test9">开始上传</button>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">健康证过期时间:</label>
+              <div class="layui-input-block">
+                <input class="layui-input healthExpire" id="healthExpire" type="text" name="username" lay-verify="title"
+                  autocomplete="off" placeholder="yyyy-MM-dd">
+              </div>
+            </div>
+            <div class="submitBox">
+              <button type="button" class="layui-btn layui-btn-normal submitMessage">提交</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="wrrap3">
+      <div class="studentBox3">
+        <div class="student-header">
+          <span>员工信息</span>
+          <span class="closeStudentBox3">x</span>
+        </div>
+        <div class="student-body">
+          <form class="layui-form" action="" lay-filter="example">
+            <div class="layui-form-item">
+              <label class="layui-form-label">用户名:</label>
+              <div class="layui-input-block">
+                <input class="layui-input account" type="text" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">密码:</label>
+              <div class="layui-input-block">
+                <input class="layui-input pwd" type="password" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">姓名:</label>
+              <div class="layui-input-block">
+                <input class="layui-input name" type="text" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">电话:</label>
+              <div class="layui-input-block">
+                <input class="layui-input tel" type="text" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">健康证:</label>
+              <div class="layui-input-block">
+                <img class="healthPic" src="" alt="" style="width: 150px;height: 80px;">
+                <div class="layui-upload" style="margin-top: 10px;">
+                  <button type="button" class="layui-btn layui-btn-normal" id="test10">+</button>
+                  <button type="button" class="layui-btn uploadHeathPic" id="test11">开始上传</button>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">健康证过期时间:</label>
+              <div class="layui-input-block">
+                <input class="layui-input healthExpire" id="addHealthExpire" type="text" name="username" lay-verify="title"
+                  autocomplete="off" placeholder="yyyy-MM-dd">
+              </div>
+            </div>
+            <div class="submitBox">
+              <button type="button" class="layui-btn layui-btn-normal addMessage">添加</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../layui/layui.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/personalManage.js"></script>
+</body>
+
+</html>

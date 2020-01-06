@@ -1,0 +1,60 @@
+# Server settings
+server:
+    port: 8080
+spring: 
+    datasource: 
+        url: jdbc:mysql://localhost:3306/takeout?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT%2B8&useSSL=false
+        username: root
+        password: qzb960514
+        driver-class-name: com.mysql.jdbc.Driver
+    http:
+        encoding:
+            charset: UTF-8
+            enabled: true
+            force: true
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+        time-zone: GMT+8
+        serialization: 
+            write-dates-as-timestamps: false
+    mvc: 
+        date-format: yyyy-MM-dd HH:mm:ss
+    servlet:
+        multipart:
+            max-file-size: 50MB
+            max-request-size: 50MB
+    main:
+        allow-bean-definition-overriding: true
+    thymeleaf: 
+        cache: false
+
+# MyBatis
+mybatis:
+    configuration:
+        map-underscore-to-camel-case: true
+    typeAliasesPackage: my.**.domain
+    mapperLocations: classpath:/my/**/mapper/*.xml
+
+# MyBatis PageHelper.
+pagehelper: 
+    #autoRuntimeDialect: true #动态数据源时，才设置
+    #closeConn: true #动态数据源时，才设置（根据数据库特性设置）
+    helperDialect: mysql
+    offsetAsPageNum: true
+    rowBoundsWithCount: true
+    pageSizeZero: true
+    reasonable: true
+    supportMethodsArguments: true
+    #params: pageNum=pageNum;pageSize=pageSize;count=countSql;reasonable=reasonable;pageSizeZero=pageSizeZero
+    
+logging:
+    level:
+        ROOT: info
+        org.springframework.web: ERROR
+        com.ibatis: debug
+        com.cetccity: info
+        my.erp.org.mapper: debug
+    pattern: 
+        console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+        file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+

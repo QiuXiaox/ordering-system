@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" type="text/css" href="../css/foodSafetyManage.css">
+  <title>可追溯订餐系统</title>
+</head>
+
+<body>
+  <div id="studentContainer">
+    <div class="layui-form">
+      <button type="button" class="layui-btn layui-btn-normal addStudent">添加食材</button>
+      <table class="layui-table">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>食材</th>
+            <th>采购来源</th>
+            <th>库存</th>
+            <th>到期时间</th>
+            <th>检验报告</th>
+            <th>入库人员</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="studentTable">
+        </tbody>
+      </table>
+      <div id="pagetion"></div>
+    </div>
+    <div class="wrrap">
+      <div class="studentBox">
+        <div class="student-header">
+          <span>食材信息</span>
+          <span class="closeStudentBox">x</span>
+        </div>
+        <div class="student-body">
+          <form class="layui-form" action="" lay-filter="example">
+            <div class="layui-form-item">
+              <label class="layui-form-label">食材:</label>
+              <div class="layui-input-block">
+                <input class="layui-input name" type="text" name="username" lay-verify="title" autocomplete="off"
+                  readonly>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">采购来源:</label>
+              <div class="layui-input-block">
+                <input class="layui-input address" type="text" name="username" lay-verify="title" autocomplete="off"
+                  readonly>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">库存:</label>
+              <div class="layui-input-block">
+                <input class="layui-input stock" type="text" name="username" lay-verify="title" autocomplete="off"
+                  readonly>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">到期时间:</label>
+              <div class="layui-input-block">
+                <input class="layui-input expireTime" type="text" name="username" lay-verify="title" autocomplete="off"
+                  readonly>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">检验报告:</label>
+              <div class="layui-input-block">
+                <img class="healthPic" src="" alt="" style="width: 80px;height: 150px;">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">入库人员:</label>
+              <div class="layui-input-block">
+                <input class="layui-input empName" type="text" name="username" lay-verify="title"
+                  autocomplete="off" value="" readonly>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="wrrap2">
+      <div class="studentBox2">
+        <div class="student-header">
+          <span>食材信息</span>
+          <span class="closeStudentBox2">x</span>
+        </div>
+        <div class="student-body">
+          <form class="layui-form" action="" lay-filter="example">
+            <div class="layui-form-item">
+              <label class="layui-form-label">食材:</label>
+              <div class="layui-input-block">
+                <input class="layui-input name" type="text" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">采购来源:</label>
+              <div class="layui-input-block">
+                <input class="layui-input address" type="text" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">库存:</label>
+              <div class="layui-input-block">
+                <input class="layui-input stock" type="text" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">到期时间:</label>
+              <div class="layui-input-block">
+                <input class="layui-input expireTime" id="expireTime" type="text" name="username" lay-verify="title"
+                  autocomplete="off" placeholder="yyyy-MM-dd">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">入库人员:</label>
+              <div class="layui-input-block">
+                <div class="f-push">
+                  <p id="empName2">入库人员</p>
+                  <div class="empBox2">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">检验报告:</label>
+              <div class="layui-input-block">
+                <img class="healthPic" src="" alt="" style="width: 80px;height: 150px;">
+                <div class="layui-upload">
+                  <button type="button" class="layui-btn layui-btn-normal" id="test8">+</button>
+                  <button type="button" class="layui-btn uploadHeathPic" id="test9">开始上传</button>
+                </div>
+              </div>
+            </div>
+            <div class="submitBox">
+              <button type="button" class="layui-btn layui-btn-normal submitMessage">提交</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="wrrap3">
+      <div class="studentBox3">
+        <div class="student-header">
+          <span>食材信息</span>
+          <span class="closeStudentBox3">x</span>
+        </div>
+        <div class="student-body">
+          <form class="layui-form" action="" lay-filter="example">
+            <div class="layui-form-item">
+              <label class="layui-form-label">食材:</label>
+              <div class="layui-input-block">
+                <input class="layui-input name" type="text" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">采购来源:</label>
+              <div class="layui-input-block">
+                <input class="layui-input address" type="text" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">库存:</label>
+              <div class="layui-input-block">
+                <input class="layui-input stock" type="text" name="username" lay-verify="title" autocomplete="off">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">到期时间:</label>
+              <div class="layui-input-block">
+                <input class="layui-input expireTime" id="expireTime2" type="text" name="username" lay-verify="title"
+                  autocomplete="off" placeholder="yyyy-MM-dd">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">入库人员:</label>
+              <div class="layui-input-block">
+                <div class="f-push">
+                  <p id="empName3">入库人员</p>
+                  <div class="empBox3">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">检验报告:</label>
+              <div class="layui-input-block">
+                <img class="healthPic" src="" alt="" style="width: 80px;height: 150px;">
+                <div class="layui-upload">
+                  <button type="button" class="layui-btn layui-btn-normal" id="test10">+</button>
+                  <button type="button" class="layui-btn uploadHeathPic" id="test11">开始上传</button>
+                </div>
+              </div>
+            </div>
+            <div class="submitBox">
+              <button type="button" class="layui-btn layui-btn-normal addMessage">添加</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../layui/layui.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/foodSafetyManage.js"></script>
+</body>
+
+</html>

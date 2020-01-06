@@ -1,0 +1,185 @@
+body {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#order {
+  width: 100%;
+  height: 100%;
+}
+
+.order-title {
+  height: 50px;
+  line-height: 50px;
+  background: #FF5722;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.orderTableTop {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  text-align: center;
+  background: #FFC107;
+}
+
+.orderTableTop>div {
+  width: 20%;
+}
+
+.orderBox {
+  width: 100%;
+  border: 1px dashed #393D49;
+  background: #8BC34A;
+  color: #fff;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.orderPic,.orderDetail,.order-price,.order-num,.order-operate {
+  width: 18%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.orderPic img {
+  width: 100%;
+  height: 100%;
+}
+
+.checkDetail {
+  margin-right: 10px;
+}
+
+.checkDetail,.delete {
+  cursor: pointer;
+}
+
+.checkDetail:hover,.delete:hover {
+  color: #FF5722;
+}
+
+.wrrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  margin: 0;
+  z-index: 2003;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: none;
+}
+
+.studentBox {
+  width: 50%;
+  background: #FFF;
+  position: relative;
+  margin: 0 auto 50px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+  box-sizing: border-box;
+  margin-top: 15vh;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.studentBox::-webkit-scrollbar.wrrap::-webkit-scrollbar {
+  display: none;
+}
+
+.studentBox .student-header {
+  padding: 20px 20px 10px;
+}
+
+.studentBox .student-body {
+  padding: 30px 20px;
+  color: #606266;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.studentBox .closeStudentBox {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: #979aa0;
+}
+
+.studentBox input {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 20px;
+  margin-top: 0px;
+  border-radius: 4px;
+  border: 1px solid #DCDFE6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.studentBox .student-body .layui-form-label {
+  padding: 9px 0;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #DCDFE6;
+  font-size: 14px;
+  padding: 20px;
+  margin-top: 0px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+#pagetion {
+  width: 100%;
+  position: relative;
+}
+
+#pagetion .layui-laypage {
+  position: absolute;
+  left: 50%;
+  top: 5px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}

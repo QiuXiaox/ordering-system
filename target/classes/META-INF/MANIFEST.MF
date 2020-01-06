@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: Project
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: QZB
+Implementation-Vendor-Id: my
+Build-Jdk: 1.8.0_111
+Implementation-URL: https://maven.aliyun.com/repository/public
+Created-By: Maven Integration for Eclipse
+
